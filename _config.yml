@@ -1,0 +1,5 @@
+title: Barchan
+description: A viewer for HiRISE JPEG 2000 products, for Apple Silicon Macs
+theme: jekyll-theme-minimal
+url: https://venriq.github.io
+baseurl: /barchan-releases
