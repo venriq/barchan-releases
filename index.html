@@ -1,0 +1,82 @@
+---
+layout: default
+landing: true
+---
+<header class="hero">
+<img class="hero-icon" src="{{ '/apple-touch-icon.png' | relative_url }}" alt="" width="128" height="128">
+<h1>Barchan</h1>
+<p class="pitch">A fast viewer for HiRISE images of Mars, for Apple Silicon Macs.</p>
+<a class="download" href="https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-arm64.dmg">Download v1.2.0</a>
+<p class="requirements">macOS 15 or later - Apple Silicon - Free and open source (AGPL-3.0)</p>
+<ul class="hero-links">
+<li><a href="https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-arm64.dmg.sha256">SHA-256 checksum</a></li>
+<li><a href="https://github.com/venriq/barchan-releases/releases/tag/v1.2.0">Release notes</a></li>
+<li><a href="{{ '/guide/' | relative_url }}">Install guide</a></li>
+</ul>
+</header>
+<div class="hero-shot">
+<figure class="window">
+<div class="window-bar"><span></span><span></span><span></span><strong>ESP_043651_1590_RED.JP2</strong></div>
+<img src="{{ '/assets/screenshots/browse.jpg' | relative_url }}" width="1032" height="645" alt="Barchan showing dark dunes on bright ground in a HiRISE image, with the navigator, the label's metadata, and the readout of the pixel under the pointer, including its latitude and longitude">
+</figure>
+</div>
+<main class="features">
+<section class="feature">
+<div class="feature-text">
+<h2>Straight from the archive</h2>
+<p>Open a HiRISE product by its address, as the archive or the HiRISE website gives it. Barchan reads only the parts of the image on screen, so a product of hundreds of megabytes opens without downloading it first.</p>
+</div>
+<figure class="window">
+<div class="window-bar"><span></span><span></span><span></span><strong title="https://www.uahirise.org/PDS4/RDR/ESP/ORB_094100_094199/ESP_094199_1825/ESP_094199_1825_RED.xml">https://www.uahirise.org/PDS4/…/ESP_094199_1825_RED.xml</strong></div>
+<img src="{{ '/assets/screenshots/remote.jpg' | relative_url }}" width="568" height="355" loading="lazy" alt="A HiRISE product read over the network from the HiRISE archive, with its histogram and statistics in the Mapping section">
+</figure>
+</section>
+<section class="feature">
+<div class="feature-text">
+<h2>Reads PDS4 labels</h2>
+<p>Open a PDS4 label and Barchan opens the JPEG 2000 product it lists. The label's fields fill the Metadata section, where you can search them, and the readout gives calibrated values.</p>
+</div>
+<figure class="window">
+<div class="window-bar"><span></span><span></span><span></span><strong>ESP_094199_1825_RED.xml</strong></div>
+<img src="{{ '/assets/screenshots/pds4.jpg' | relative_url }}" width="568" height="355" loading="lazy" alt="Gullies on a crater wall, opened from a PDS4 label whose tree of fields fills the Metadata section">
+</figure>
+</section>
+<section class="feature">
+<div class="feature-text">
+<h2>Measure on the surface</h2>
+<p>Click out a path and the Measurement section lists each leg's length and azimuth and the total. On a map projected product the lengths are in metres on the surface of Mars.</p>
+</div>
+<figure class="window">
+<div class="window-bar"><span></span><span></span><span></span><strong>ESP_043651_1590_RED.JP2</strong></div>
+<img src="{{ '/assets/screenshots/measure.jpg' | relative_url }}" width="568" height="355" loading="lazy" alt="A path of two legs measured across dunes and bright ground, its total of over two kilometres beside it and each leg's length and azimuth in the Measurement section">
+</figure>
+</section>
+<section class="feature">
+<div class="feature-text">
+<h2>Anaglyphs in full resolution</h2>
+<p>HiRISE stereo anaglyphs open like any other product, at every scale down to single pixels. Put on red and cyan glasses and pan across the relief.</p>
+</div>
+<figure class="window">
+<div class="window-bar"><span></span><span></span><span></span><strong>ESP_080662_2620_ESP_080688_2620_RED.JP2</strong></div>
+<img src="{{ '/assets/screenshots/anaglyph.jpg' | relative_url }}" width="568" height="355" loading="lazy" alt="A red and cyan stereo anaglyph of barchan dunes on the north polar erg at full resolution">
+</figure>
+</section>
+<section class="feature">
+<div class="feature-text">
+<h2>See what it is doing</h2>
+<p>The Activity window charts the last two minutes of decoding, network reads, cache hits, and memory, so a slow view can be traced to the network, the decoder, or the caches.</p>
+</div>
+<figure class="window portrait">
+<div class="window-bar"><span></span><span></span><span></span><strong>Activity</strong></div>
+<img src="{{ '/assets/screenshots/activity.png' | relative_url }}" width="360" height="571" loading="lazy" alt="The Activity window after two minutes of browsing a product on the archive, with figures and sparklines for the processor, decoding, network, caches, GPU, and memory">
+</figure>
+</section>
+</main>
+<section class="closing">
+<h2>Free and open source</h2>
+<p>Barchan is licensed under the GNU Affero General Public License 3.0. Every release comes with its source code, and the guide walks through verifying and installing the disk image.</p>
+<ul class="closing-links">
+<li><a href="https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-source.tar.gz">Source code (tar.gz)</a></li>
+<li><a href="{{ '/guide/' | relative_url }}">Read the guide</a></li>
+</ul>
+</section>

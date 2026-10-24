@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" sizes="64x64" href="{{ '/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/screenshots/browse.jpg' | absolute_url }}">
+</head>
+<body>
+{% if page.landing %}
+{{ content }}
+{% else %}
+<header class="bar">
+<a class="bar-home" href="{{ '/' | relative_url }}"><img src="{{ '/favicon.png' | relative_url }}" alt="" width="32" height="32">Barchan</a>
+</header>
+<main class="prose">
+{{ content }}
+</main>
+{% endif %}
+<footer class="footer">
+<p>Barchan is free software under the AGPL-3.0.</p>
+<p><a href="https://github.com/venriq/barchan-releases/releases">All releases</a></p>
+<p>Copyright {{ site.time | date: '%Y' }} Fractional Vector LLC</p>
+</footer>
+</body>
+</html>

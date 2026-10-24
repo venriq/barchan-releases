@@ -1,5 +1,4 @@
 title: Barchan
-description: A viewer for HiRISE JPEG 2000 products, for Apple Silicon Macs
-theme: jekyll-theme-minimal
+description: A fast viewer for HiRISE images of Mars, for Apple Silicon Macs
 url: https://venriq.github.io
 baseurl: /barchan-releases

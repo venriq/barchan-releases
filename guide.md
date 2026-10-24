@@ -1,3 +1,11 @@
+---
+layout: default
+title: Install guide
+permalink: /guide/
+---
+
+[Back to Barchan]({{ '/' | relative_url }})
+
 # Download Barchan
 
 Barchan is a viewer for HiRISE JPEG 2000 products that also opens PNG, TIFF, GeoTIFF, and JPEG images. This page
