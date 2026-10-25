@@ -53,8 +53,15 @@ would disagree with a digest taken from a different one. A checksum here identif
 
 ## Install
 
-From 1.0.1, Barchan is signed with a Developer ID belonging to **Fractional Vector LLC**, and Apple has notarized both
-the disk image and the application, so macOS opens them like any other application from an identified developer:
+Install the current release, [Barchan 1.2.0](https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-arm64.dmg).
+Every release from 1.0.1 on is signed with a Developer ID and notarized by Apple, so it installs in three steps.
+Releases up to 1.0.0 came before that: macOS blocks them until they are approved twice in System Settings, and they
+miss what later releases fixed. If you have one, install the current release over it instead of approving it.
+
+### Releases from 1.0.1 on (recommended)
+
+These releases are signed with a Developer ID belonging to **Fractional Vector LLC**, and Apple has notarized both the
+disk image and the application, so macOS opens them like any other application from an identified developer:
 
 1. Double-click the disk image. It opens to a window holding **Barchan** beside an **Applications** shortcut.
 2. Drag **Barchan** onto the **Applications** shortcut, then eject the disk image.
@@ -70,6 +77,12 @@ offline too. If macOS instead says Barchan **Not Opened** and that Apple could n
 that was published: check it against its checksum again, and download it afresh if it does not match.
 
 ### Releases up to 1.0.0
+
+**Not recommended.** These releases are no longer on the releases page. [Download Barchan 1.2.0](#download)
+instead. The steps below are kept for a copy of 1.0.0 or earlier that you already have and need to open.
+
+<details markdown="1">
+<summary>Show the steps for releases up to 1.0.0</summary>
 
 Barchan 1.0.0 and the releases before it are signed, but ad-hoc rather than with a Developer ID, and they are not
 notarized. macOS therefore refuses anything it has marked as downloaded until you approve it, and since macOS 15 the
@@ -118,6 +131,8 @@ checksum published beside it.
 
 These steps were checked on macOS 15.7 and macOS 27.0. The wording moves between macOS releases, so on another
 version the buttons may read a little differently while the path through System Settings stays the same.
+
+</details>
 
 ## Opening products
 

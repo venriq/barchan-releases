@@ -127,6 +127,10 @@ img {
   color: var(--hero-muted);
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hero-links {
   display: flex;
   flex-wrap: wrap;
@@ -380,6 +384,29 @@ img {
   vertical-align: top;
 }
 
+.prose details {
+  margin: 24px 0;
+  padding: 0 20px;
+  border: 1px solid var(--frame);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.prose summary {
+  padding: 14px 0;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.prose details[open] summary {
+  border-bottom: 1px solid var(--frame);
+}
+
+.prose details[open] {
+  padding-bottom: 4px;
+}
+
 @media (max-width: 720px) {
   .hero {
     padding: 56px 16px 120px;
@@ -447,5 +474,9 @@ img {
 
   .prose h1 {
     font-size: 32px;
+  }
+
+  .prose details {
+    padding: 0 16px;
   }
 }
