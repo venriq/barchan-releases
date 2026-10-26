@@ -378,10 +378,16 @@ img {
 
 .prose th,
 .prose td {
+  min-width: 8em;
   padding: 8px 12px;
   border: 1px solid var(--frame);
   text-align: left;
   vertical-align: top;
+}
+
+.prose td code {
+  overflow-wrap: normal;
+  white-space: nowrap;
 }
 
 .prose details {

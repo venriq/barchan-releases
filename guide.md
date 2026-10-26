@@ -19,13 +19,13 @@ covers installing a released build. Each release also carries its [source code](
 ## Download
 
 Releases are on the [releases page](https://github.com/venriq/barchan-releases/releases). The current release is
-[v1.2.0](https://github.com/venriq/barchan-releases/releases/tag/v1.2.0), and these are the two of its files that
+[v1.3.0](https://github.com/venriq/barchan-releases/releases/tag/v1.3.0), and these are the two of its files that
 install it. What changed in each release is in its notes on the releases page.
 
 | File | What it is |
 |------|------------|
-| [`Barchan-1.2.0-arm64.dmg`](https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-arm64.dmg) | the disk image holding the application |
-| [`Barchan-1.2.0-arm64.dmg.sha256`](https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-arm64.dmg.sha256) | its SHA-256 checksum |
+| [`Barchan-1.3.0-arm64.dmg`](https://github.com/venriq/barchan-releases/releases/download/v1.3.0/Barchan-1.3.0-arm64.dmg) | the disk image holding the application |
+| [`Barchan-1.3.0-arm64.dmg.sha256`](https://github.com/venriq/barchan-releases/releases/download/v1.3.0/Barchan-1.3.0-arm64.dmg.sha256) | its SHA-256 checksum |
 
 Download both into the same folder.
 
@@ -35,13 +35,13 @@ The checksum file names the disk image beside it, so with both in `~/Downloads`:
 
 ```sh
 cd ~/Downloads
-shasum -a 256 -c Barchan-1.2.0-arm64.dmg.sha256
+shasum -a 256 -c Barchan-1.3.0-arm64.dmg.sha256
 ```
 
 It should print:
 
 ```
-Barchan-1.2.0-arm64.dmg: OK
+Barchan-1.3.0-arm64.dmg: OK
 ```
 
 Anything else means the download did not arrive intact, and it should not be opened.
@@ -53,7 +53,7 @@ would disagree with a digest taken from a different one. A checksum here identif
 
 ## Install
 
-Install the current release, [Barchan 1.2.0](https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-arm64.dmg).
+Install the current release, [Barchan 1.3.0](https://github.com/venriq/barchan-releases/releases/download/v1.3.0/Barchan-1.3.0-arm64.dmg).
 Every release from 1.0.1 on is signed with a Developer ID and notarized by Apple, so it installs in three steps.
 Releases up to 1.0.0 came before that: macOS blocks them until they are approved twice in System Settings, and they
 miss what later releases fixed. If you have one, install the current release over it instead of approving it.
@@ -78,7 +78,7 @@ that was published: check it against its checksum again, and download it afresh 
 
 ### Releases up to 1.0.0
 
-**Not recommended.** These releases are no longer on the releases page. [Download Barchan 1.2.0](#download)
+**Not recommended.** These releases are no longer on the releases page. [Download Barchan 1.3.0](#download)
 instead. The steps below are kept for a copy of 1.0.0 or earlier that you already have and need to open.
 
 <details markdown="1">
@@ -185,6 +185,18 @@ a lookup, the memory the GPU has allocated and how full each window's tile atlas
 allocated. It is sampled once a second while the window is open and not at all while it is closed, and it reopens where
 it was at the next launch, so a slow view can be traced to the network, the decoder, or the caches.
 
+To find an image without leaving Barchan, choose **Tools > Show Archive Browser** (Option+Cmd+B). The HiRISE Archive
+window shows the archive's `EXTRAS/ANAGLYPH`, `EXTRAS/RDR`, and `RDR` folders inside a `PDS4` folder; expand one, by
+its triangle, by a double-click, or with the Right arrow, and Barchan fetches its listing, which the archive can take
+most of a minute to send for a large folder. Each folder shows its subfolders and only its JPEG2000 files, with the date the archive last
+updated each, in UTC, and each file's exact size in bytes. Click **Name**, **Updated**, or **Size** to sort, and again
+to reverse. Drag the divider before **Updated** or **Size** to make that column wider or narrower, giving the names
+more room or less, and double-click a divider to fit its column to its contents again; hover over a row to see in full
+whatever of it was cut short. Type into the filter field to narrow the folders already fetched to the names that hold what you typed.
+Double-click a file, or select it and press Return, to open it as **File > Open Location** would. Right-click a folder
+for **Refresh** to fetch it again. The window stays above Barchan's own windows, hides while you use another application,
+and comes back where you left it, with the same folders open and its columns as wide, at the next launch.
+
 Barchan registers as an alternate viewer for JPEG 2000, PNG, TIFF, and JPEG, and for the XML of a PDS4 label, so
 Preview and your XML editor stay the default and a double-click still opens them, while Barchan appears under Finder's
 **Open With** menu. To make Barchan the default
@@ -195,7 +207,7 @@ for one kind of file, select such a file in Finder, press Cmd+I, choose Barchan 
 
 Barchan is free software, licensed under the GNU Affero General Public License, version 3 only (AGPL-3.0-only). Every
 release carries the complete source of the build it offers as `Barchan-<version>-source.tar.gz` beside its disk image,
-[`Barchan-1.2.0-source.tar.gz`](https://github.com/venriq/barchan-releases/releases/download/v1.2.0/Barchan-1.2.0-source.tar.gz)
+[`Barchan-1.3.0-source.tar.gz`](https://github.com/venriq/barchan-releases/releases/download/v1.3.0/Barchan-1.3.0-source.tar.gz)
 for the current release. It holds the commit the disk image was built from, with the vendored Grok JPEG 2000 decoder,
 also AGPL-3.0, and its submodules, at the commits that build used. The one submodule it leaves out is Grok's GPU
 plugin, which Barchan never builds and whose repository is not public; the release's notes name it. Its `README.md`
